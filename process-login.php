@@ -6,7 +6,7 @@
 
   include("includes/database.php");
 
-  $sql = "SELECT * FROM `user` WHERE `username` = '$username' AND `password` = '$password';";
+  $sql = "SELECT * FROM `User` WHERE `username` = '$username' AND `password` = '$password';";
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
 

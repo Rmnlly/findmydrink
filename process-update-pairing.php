@@ -4,7 +4,7 @@
   //user_id session variable would be captured here
   //The user id is required in order to insert this
 
-  //$user_id = session variable here
+  $user_id = $_SESSION['user_id'];
   $pair_id = $_POST['pair_id'];
   $food = $_POST['food'];
   $drink = $_POST['drink'];
