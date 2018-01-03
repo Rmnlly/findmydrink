@@ -1,8 +1,6 @@
 <?php
+  session_start();
   include("includes/database.php");
-
-  //user_id session variable would be captured here
-  //The user id is required in order to insert this
 
   $user_id = $_SESSION['user_id'];
   $pair_id = $_POST['pair_id'];

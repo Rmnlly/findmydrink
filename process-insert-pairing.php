@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include("includes/database.php");
 
   $user_id = $_SESSION['user_id'];
@@ -24,7 +25,7 @@
   }
 
   $stmt = $pdo->prepare("INSERT INTO `Pairings`(`user_id`, `food`, `drink`, `keywords`, `picture`)
-                          VALUES ('$user_id','$food','$drink','$keywords','$picture');");
+                          VALUES ($user_id,'$food','$drink','$keywords','$picture');");
   $stmt->execute();
-  header("Location:userpage.php"); //This could be the user page also
+  header("Location:index.php"); //This could be the user page also
  ?>
