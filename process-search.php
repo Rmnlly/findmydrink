@@ -3,7 +3,8 @@
 
   $search = $_POST['search'];
 
-  $query = "SELECT * FROM `Pairings` WHERE `keywords` LIKE :search OR `food` LIKE :search";
+  $query = "SELECT * FROM `Pairings`
+            WHERE (`keywords` LIKE '%".$search."%') OR (`food` LIKE '%".$search."%');";
   $stmt = $dbh->prepare($query);
   $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_INT);
   $stmt->execute();
