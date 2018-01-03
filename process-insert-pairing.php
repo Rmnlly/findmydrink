@@ -2,6 +2,7 @@
   include("includes/database.php");
 
   //user_id session variable would be captured here
+  //The user id is required in order to insert this
 
   $food = $_POST['food'];
   $drink = $_POST['drink'];
