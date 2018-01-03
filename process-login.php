@@ -1,29 +1,25 @@
 <?php
-session_start();
+  session_start();
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+  $username = $_POST["username"];
+  $password = $_POST["password"];
 
-include("includes/database.php");
+  include("includes/database.php");
 
-$stmt = $pdo->prepare("SELECT * FROM `User`
-	WHERE `username` = '$username'
-	AND `password` = '$password';");
+  $sql = "SELECT * FROM `user` WHERE `username` = '$username' AND `password` = '$password';";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
 
-$stmt->execute();
+  $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-
-if($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-	$_SESSION["authenticated"] = true;
-	$_SESSION["id"] = $row['id'];
-	$_SESSION["firstName"] = $row['firstName'];
-	$_SESSION["lastName"] = $row['lastName'];
-
-	header("Location: index.php");
-}else{
-	//BAD USERNAME AND PASSWORD
-	echo("bad username and password. Please try again");
-	?><a href="login-form.php">Login here</a><?
-}
+  if ($row) {
+    // Login
+    $_SESSION["authenticated"] = 'true';
+    $_SESSION["user_id"] = $row['id'];
+    $_SESSION["username"] = $row['username'];
+    header("Location: main.php");
+  }else{
+    echo("Incorrect username and password. Please try again.");
+  }
 
 ?>
