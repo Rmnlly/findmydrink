@@ -4,6 +4,7 @@
   include("includes/header.php");
   //The session will contain the users id, we will need to obtain this and pass it
   //to the processing page through the hidden field defined below
+  //Maybe its not required considering only a logged in user can create pairings
  ?>
  <div class="form-container">
    <form class ="input-idea" action="process-insert-pairing.php" method="post" enctype="multipart/form-data">
@@ -21,13 +22,8 @@
      <label for="picture">Pairing Image</label>
      <input id='picture' type="file" name ="picture"/>
 
-     <label for="private">Is this idea private?</label>
-     <input type="checkbox" name="private" id="private"/>
-
      <input type="submit" value="Create Pairing">
-
    </form>
-
  </div>
 <?
   include("includes/footer.php");
