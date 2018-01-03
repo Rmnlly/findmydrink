@@ -2,13 +2,9 @@
   session_start();
   include("includes/database.php");
   include("includes/header.php");
-  //The session will contain the users id, we will need to obtain this and pass it
-  //to the processing page through the hidden field defined below
-  //Maybe its not required considering only a logged in user can create pairings
  ?>
  <div class="form-container">
    <form class ="input-idea" action="process-insert-pairing.php" method="post" enctype="multipart/form-data">
-     <input type="hidden" name="user_id" value="<?//Here we will pass the userid?>">
 
      <label for="food">Food </label>
      <input id='food' type="text" name="food" maxlength="25"/>

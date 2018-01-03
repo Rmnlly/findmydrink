@@ -6,7 +6,7 @@
 
 include("includes/database.php");
 
-$sql = "INSERT INTO `user` (`id`, `email`, `username`, `password`) VALUES (NULL, '$email', '$username', '$password');";
+$sql = "INSERT INTO `User` (`id`, `email`, `username`, `password`) VALUES (NULL, '$email', '$username', '$password');";
 
 $stmt = $pdo->prepare($sql);
 
