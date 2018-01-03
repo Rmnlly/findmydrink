@@ -4,7 +4,7 @@
   $search = $_POST['search'];
 
   $query = "SELECT * FROM `Pairings` WHERE `keywords` LIKE '%" . $search . "%' OR `food` LIKE '%".$search."%'";
-  
+
   $stmt = $pdo->prepare($query);
 
   $stmt->execute();

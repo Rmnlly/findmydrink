@@ -1,0 +1,14 @@
+h1.title {
+  text-align: center;
+}
+
+div.search-wrapper {
+  display: block;
+  text-align: center;
+}
+
+.search-form {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
+}
