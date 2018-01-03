@@ -3,21 +3,18 @@
 
   $search = $_POST['search'];
 
-  $query = "SELECT * FROM `Pairings`
-            WHERE (`keywords` LIKE '%".$search."%') OR (`food` LIKE '%".$search."%');";
-  $stmt = $dbh->prepare($query);
-  $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_INT);
+  $query = "SELECT * FROM `Pairings` WHERE `keywords` LIKE '%" . $search . "%' OR `food` LIKE '%".$search."%'";
+  
+  $stmt = $pdo->prepare($query);
+
   $stmt->execute();
-  $result = $stmt->fetchAll();
 
-  if ($stmt->rowCount() > 0) {
-    $result = $stmt->fetchAll();
-
-    foreach( $result as $row ) {
-    echo $row["id"];
-    echo $row["drink"];
+  if($stmt->rowCount() > 0){
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+      echo($row['id']);
+      echo($row['drink']);
     }
-    } else {
-    echo 'There is nothing to show';
+  }else {
+    echo 'nothing to show';
   }
  ?>
