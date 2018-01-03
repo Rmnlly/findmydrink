@@ -1,9 +1,8 @@
 <?php
+  session_start();
   include("includes/database.php");
 
-  //user_id session variable would be captured here
-  //The user id is required in order to insert this
-
+  $user_id = $_SESSION['user_id'];
   $food = $_POST['food'];
   $drink = $_POST['drink'];
   $keywords = $_POST['keywords'];
@@ -26,7 +25,7 @@
   }
 
   $stmt = $pdo->prepare("INSERT INTO `Pairings`(`user_id`, `food`, `drink`, `keywords`, `picture`)
-                          VALUES ('$user_id','$food','$drink','$keywords','$picture');");
+                          VALUES ($user_id,'$food','$drink','$keywords','$picture');");
   $stmt->execute();
-  header("Location:userpage.php"); //This could be the user page also
+  header("Location:index.php"); //This could be the user page also
  ?>

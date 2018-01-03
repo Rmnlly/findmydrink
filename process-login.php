@@ -17,7 +17,7 @@
     $_SESSION["authenticated"] = 'true';
     $_SESSION["user_id"] = $row['id'];
     $_SESSION["username"] = $row['username'];
-    header("Location: main.php");
+    header("Location: index.php");
   }else{
     echo("Incorrect username and password. Please try again.");
   }
