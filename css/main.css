@@ -1,5 +1,6 @@
 body {
   background-color: #493A97;
+  margin: 0;
 }
 
 h1.title {
@@ -47,8 +48,7 @@ a {
 .nav-bar {
   position: relative;
   width: auto;
-  max-width: 900px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto;
   background: #97F1F6;
 }
 
