@@ -1,3 +1,7 @@
+body {
+  background-color: #493A97;
+}
+
 h1.title {
   text-align: center;
   display: block;
@@ -79,6 +83,7 @@ nav ul li a:hover {
 .signup {
   margin: 5px auto;
   width: 265px;
+  color: #fff;
 }
 
 .signup input{
@@ -88,4 +93,5 @@ nav ul li a:hover {
 
 .login {
   text-align: center;
+  color: #fff;
 }
