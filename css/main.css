@@ -1,5 +1,6 @@
 h1.title {
   text-align: center;
+  display: block;
 }
 
 div.search-wrapper {
@@ -13,7 +14,78 @@ div.search-wrapper {
   text-align: left;
 }
 
-input#search-btn {
-    display: block;
-    margin: 1em auto;
+input {
+  font-size: 16px;
+  padding: 7px;
+  outline: 0;
+  border: 0;
+  width: 250px;
+  border-radius: 5px;
+  background: #9E58A7;
+  color: #fff;
+}
+
+input[type=submit] {
+  width: auto;
+  padding: 5px 18px;
+  text-shadow: none;
+  cursor: pointer;
+  box-shadow: none;
+  background: #333333;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+}
+.nav-bar {
+  position: relative;
+  width: auto;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  background: #97F1F6;
+}
+
+.nav-bar h1 {
+  margin: 35px 0 0 0;
+  font-size: 40px;
+  color: #F48ACE;
+  font-family: cursive;
+}
+
+nav ul {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  display: block;
+}
+
+nav ul li {
+  display: inline;
+  float: right;
+  padding: 3px 15px;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #493A97;
+}
+
+.signup {
+  margin: 5px auto;
+  width: 265px;
+}
+
+.signup input{
+  margin: auto;
+  display: block;
+}
+
+.login {
+  text-align: center;
 }

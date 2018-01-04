@@ -5,9 +5,9 @@ session_start();
   include("includes/database.php");
 ?>
 <div>
-  <h1>Login</h1>
+  <h1 class="login">Login</h1>
 </div>
-<div>
+<div class=signup>
   <form action="process-login.php" method="POST">
     <p>
       Username: <input type="text" name="username" />
