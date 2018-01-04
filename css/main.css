@@ -12,6 +12,8 @@ div.search-wrapper {
   margin: 0 auto;
   text-align: left;
 }
-.signup{
-  background-color: #9825af;
+
+input#search-btn {
+    display: block;
+    margin: 1em auto;
 }
