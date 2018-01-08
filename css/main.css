@@ -2,6 +2,7 @@ body {
   background-color: #5F026F;
   margin: 0;
   font-family: 'Rajdhani', sans-serif;
+  overflow: hidden;
 }
 
 h1.title {
