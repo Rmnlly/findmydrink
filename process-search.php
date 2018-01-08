@@ -17,4 +17,6 @@
   }else {
     echo 'nothing to show';
   }
+
+  //Here we want to show cards with images and drink names underneath
  ?>

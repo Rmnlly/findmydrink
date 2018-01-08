@@ -17,7 +17,8 @@ if($result){
   $_SESSION["user_id"] = $row['id'];
   $_SESSION["username"] = $row['username'];
   echo 'Thank you for registering with our website. You are now logged in.';
-  ?><a href="index.php">Home</a>
+  ?>
+    <a href="index.php">Home</a>
   <?
 }else{
   echo("Invalid sign up. Please try again.");
