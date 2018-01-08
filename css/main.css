@@ -1,12 +1,17 @@
 body {
-  background-color: #493A97;
+  background-color: #5F026F;
   margin: 0;
+  font-family: 'Rajdhani', sans-serif;
   overflow: hidden;
 }
 
 h1.title {
   text-align: center;
   display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Righteous', cursive;
 }
 
 div.search-wrapper {
@@ -27,8 +32,8 @@ input {
   border: 0;
   width: 250px;
   border-radius: 5px;
-  background: #9E58A7;
-  color: #fff;
+  background: #fff;
+  color: black;
 }
 
 input[type=submit] {
@@ -37,8 +42,9 @@ input[type=submit] {
   text-shadow: none;
   cursor: pointer;
   box-shadow: none;
-  background: #333333;
+  background: #FFC107;
   color: #fff;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 a {
@@ -47,17 +53,17 @@ a {
 
 }
 .nav-bar {
+  background-color: #740588;
   position: relative;
   width: auto;
   margin: 0 auto;
-  background: #97F1F6;
+  margin-bottom: 4em;
 }
 
 .nav-bar h1 {
   margin: 0;
   font-size: 40px;
-  color: #F48ACE;
-  font-family: cursive;
+  color: #fec108;
 }
 
 nav ul {
@@ -68,6 +74,7 @@ nav ul {
 }
 
 nav ul li {
+  color: white;
   display: inline;
   float: right;
   padding: 3px 15px;
@@ -78,7 +85,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #493A97;
+  color: #fec108;
 }
 
 .signup {
