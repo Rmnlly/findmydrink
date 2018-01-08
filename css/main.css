@@ -47,21 +47,34 @@ input[type=submit] {
   font-family: 'Rajdhani', sans-serif;
 }
 
+input[type=submit]:hover {
+  background:#fff;
+  color:#000;
+}
+
 a {
   text-decoration: none;
   color: inherit;
-
 }
+a.home-redirect {
+  display: block;
+  border: 2px solid #fff;
+}
+a.home-redirect:hover {
+  color:#fff
+}
+
 .nav-bar {
   background-color: #740588;
   position: relative;
   width: auto;
   margin: 0 auto;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 .nav-bar h1 {
   margin: 0;
+  padding-top: 0.5em;
   font-size: 40px;
   color: #fec108;
 }
@@ -69,7 +82,7 @@ a {
 nav ul {
   list-style: none;
   overflow: hidden;
-  padding: 0;
+  padding: 0.25em 0;
   display: block;
 }
 
@@ -86,6 +99,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #fec108;
+  transition: color .75s;
 }
 
 .signup {

@@ -21,5 +21,4 @@
   }else{
     echo("Incorrect username and password. Please try again.");
   }
-
 ?>

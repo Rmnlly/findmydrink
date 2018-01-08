@@ -5,6 +5,8 @@
   $email = $_POST["email"];
 
 include("includes/database.php");
+include("includes/header.php");
+
 
 $sql = "INSERT INTO `User` (`id`, `email`, `username`, `password`) VALUES (NULL, '$email', '$username', '$password');";
 
@@ -18,11 +20,12 @@ if($result){
   $_SESSION["username"] = $row['username'];
   echo 'Thank you for registering with our website. You are now logged in.';
   ?>
-    <a href="index.php">Home</a>
+    <a class="home-redirect" href="index.php">Home</a>
   <?
 }else{
   echo("Invalid sign up. Please try again.");
   ?><a href="signup-form.php">Sign Up</a>
   <?
 }
+  include("includes/footer.php");
 ?>
