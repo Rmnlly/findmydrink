@@ -103,6 +103,22 @@ nav ul li a:hover {
   transition: color .75s;
 }
 
+.footer-container {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #740588;
+  height: 3em;
+}
+
+.footer-info {
+  list-style: none;
+  display: inline-block;
+  float: right;
+  color: white;
+  padding: 0 15px;
+}
+
 .signup {
   margin: 5px auto;
   width: 265px;
@@ -117,6 +133,14 @@ nav ul li a:hover {
 .login {
   text-align: center;
   color: #fff;
+}
+
+article.result-item {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #fff;
+  margin: 10px;
 }
 
 /*Add media query for phones that changes search button to be under bar and
