@@ -30,10 +30,18 @@ input {
   padding: 7px;
   outline: 0;
   border: 0;
-  width: 20em;
+  width: 265px;
   border-radius: 5px;
   background: #fff;
   color: black;
+}
+
+input#search {
+  width: 20em;
+}
+
+textarea {
+  min-width: 25em;
 }
 
 input[type=submit] {
@@ -128,6 +136,10 @@ nav ul li a:hover {
 .signup input{
   margin: auto;
   display: block;
+}
+
+.input-idea input[type=submit] {
+  margin: 10px auto 10px auto;
 }
 
 .login {

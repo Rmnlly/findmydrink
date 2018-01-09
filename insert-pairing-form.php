@@ -2,8 +2,9 @@
   session_start();
   include("includes/database.php");
   include("includes/header.php");
+  include("includes/navbar.php");
  ?>
- <div class="form-container">
+ <div class="signup">
    <form class ="input-idea" action="process-insert-pairing.php" method="post" enctype="multipart/form-data">
 
      <label for="food">Food </label>
@@ -12,7 +13,7 @@
      <label for="drink">Drink </label>
      <input id='drink' type="text" name="drink" maxlength="25"/>
 
-     <label for="keywords">Keywords </label>
+     <label for="keywords">Tips </label>
      <textarea type="tArea" name="keywords" rows="10" cols="16" maxlength="150"></textarea>
 
      <label for="picture">Pairing Image</label>

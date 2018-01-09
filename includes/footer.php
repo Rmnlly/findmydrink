@@ -1,6 +1,4 @@
 <?php  ?>
-
-  </body>
   <footer>
     <div class="footer-container">
       <ul class="footer-info">
@@ -8,4 +6,5 @@
       </ul>
     </div>
   </footer>
+  </body>
 </html>
