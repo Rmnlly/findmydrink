@@ -30,7 +30,7 @@ input {
   padding: 7px;
   outline: 0;
   border: 0;
-  width: 250px;
+  width: 20em;
   border-radius: 5px;
   background: #fff;
   color: black;
@@ -145,3 +145,29 @@ article.result-item {
 
 /*Add media query for phones that changes search button to be under bar and
 reduces the size of the search to be like 60% of the screen?*/
+
+@media screen and (max-width: 480px){
+  input {
+    font-size: 16px;
+    padding: 7px;
+    outline: 0;
+    border: 0;
+    width: 15em;
+    border-radius: 5px;
+    background: #fff;
+    color: black;
+  }
+
+  input[type=submit] {
+    width: auto;
+    padding: 5px 18px;
+    text-shadow: none;
+    cursor: pointer;
+    box-shadow: none;
+    background: #FFC107;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    display: block;
+    margin: 1em auto;
+  }
+}
