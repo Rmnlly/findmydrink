@@ -6,6 +6,7 @@
 
 include("includes/database.php");
 include("includes/header.php");
+include("includes/navbar.php");
 
 
 $sql = "INSERT INTO `User` (`id`, `email`, `username`, `password`) VALUES (NULL, '$email', '$username', '$password');";
@@ -18,13 +19,19 @@ if($result){
   $_SESSION["authenticated"] = true;
   $_SESSION["user_id"] = $row['id'];
   $_SESSION["username"] = $row['username'];
-  echo 'Thank you for registering with our website. You are now logged in.';
   ?>
-    <a class="home-redirect" href="index.php">Home</a>
+  <div class="login-message-cont">
+    <h3 class="login-message">Your account has been created</h3>
+    <p>Click <a href="login-form.php">here</a> to log in</p>
+  </div>
   <?
 }else{
-  echo("Invalid sign up. Please try again.");
-  ?><a href="signup-form.php">Sign Up</a>
+  ?>
+  <div class="login-message-cont">
+    <h3 class="login-message">There was an error creating your account</h3>
+    <p>Click <a href="signup-form">here</a> to try again</p>
+  </div>
+
   <?
 }
   include("includes/footer.php");
