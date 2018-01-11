@@ -14,13 +14,15 @@
   $stmt->execute();
 
   ?>
-  <section class="result-container">
+  <div class="result-container">
     <?
     if($stmt->rowCount() > 0){
       while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         ?>
           <article class="result-item">
-            <img class="result-image" src="uploads/<?=$row['picture']?>" alt="No Image">
+            <a class="result-link" href="select-pairing.php?id=<?=$row['id']?>">
+              <img class="result-image" src="uploads/<?=$row['picture']?>" alt="No Image">
+            </a>
             <span class="result-drink"><?=$row['drink']?></span>
           </article>
         <?
@@ -29,7 +31,7 @@
       echo 'nothing to show';
     }
    ?>
- </section>
+ </div>
  <?
   include("includes/footer.php");
  ?>

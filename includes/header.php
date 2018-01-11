@@ -12,3 +12,4 @@
     <title>Find My Drink</title>
   </head>
   <body>
+    <div class="content">

@@ -1,8 +1,13 @@
+html {
+  height: 100%;
+}
 body {
   background-color: #5F026F;
   margin: 0;
   font-family: 'Rajdhani', sans-serif;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 h1.title {
@@ -15,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 div.search-wrapper {
+  flex: 1 1 auto;
   display: block;
   text-align: center;
 }
@@ -111,12 +117,19 @@ nav ul li a:hover {
   transition: color .75s;
 }
 
+.content {
+  padding: 0;
+  flex: 1 0 auto;
+  background-color: inherit;
+  overflow-y: auto;
+  min-height: 0px;
+}
+
 .footer-container {
-  position: fixed;
-  bottom: 0px;
+  flex-shrink: 0;
   width: 100%;
   background-color: #740588;
-  height: 3em;
+  height: 3.5em;
 }
 
 .footer-info {
@@ -147,16 +160,51 @@ nav ul li a:hover {
   color: #fff;
 }
 
-article.result-item {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #fff;
-  margin: 10px;
+.login-message-cont {
+  text-align: center;
+  color: #fff;
 }
 
-/*Add media query for phones that changes search button to be under bar and
-reduces the size of the search to be like 60% of the screen?*/
+.login-message-cont > p > a{
+  color: #FEC108;
+}
+
+.result-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: auto;
+}
+
+article.result-item {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  border: 3px solid #fff;
+  margin: 20px;
+}
+
+.result-drink {
+  align-self: flex-end;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.result-link {
+  align-self: flex-start;
+  flex: 2;
+  width: 100%;
+}
+
+article > a > img {
+  max-width: 80%;
+  max-height: 80%;
+}
 
 @media screen and (max-width: 480px){
   input {
