@@ -20,7 +20,7 @@
     $_SESSION["authenticated"] = 'true';
     $_SESSION["user_id"] = $row['id'];
     $_SESSION["username"] = $row['username'];
-    header("Location: index.php");
+    //header("Location: index.php");
     ?>
     <div class="login-message-cont">
       <h3 class="login-message">You have been logged in</h3>

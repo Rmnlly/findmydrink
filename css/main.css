@@ -186,6 +186,7 @@ article.result-item {
   height: 250px;
   border: 3px solid #fff;
   margin: 20px;
+  color: #fff;
 }
 
 .result-drink {
@@ -197,8 +198,40 @@ article.result-item {
 
 .result-link {
   align-self: flex-start;
+  flex: 3;
+  width: 100%;
+}
+
+.pair-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px auto;
+}
+
+.pair-container > article > img {
+  align-self: flex-start;
   flex: 2;
   width: 100%;
+}
+
+.pair-container > span {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+a.pair-favourite {
+  align-self: flex-end;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+a.pair-favourite:hover {
+  color: #fec108;
+  transition: color .75s;
 }
 
 article > a > img {
@@ -207,7 +240,7 @@ article > a > img {
 }
 
 @media screen and (max-width: 480px){
-  input {
+  input#search {
     font-size: 16px;
     padding: 7px;
     outline: 0;

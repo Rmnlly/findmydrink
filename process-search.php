@@ -4,7 +4,6 @@
   include("includes/database.php");
   include("includes/navbar.php");
 
-
   $search = $_POST['search'];
 
   $query = "SELECT * FROM `Pairings` WHERE `keywords` LIKE '%" . $search . "%' OR `food` LIKE '%".$search."%'";
